@@ -42,6 +42,9 @@ public class CityDao {
 				city_code = city.getString(0);
 				return city_code;
 			}
+			//最后一定要关闭连接
+			city.close();
+			database.close();
 		}
 		return city_code;
 	}
@@ -60,5 +63,6 @@ public class CityDao {
 		contentValues.put("city_code", city_code);
 		contentValues.put("city_name", city_name);
 		database.insert("city", null, contentValues);
+		database.close();
 	}
 }

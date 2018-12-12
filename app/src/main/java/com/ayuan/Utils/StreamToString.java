@@ -13,7 +13,6 @@ public class StreamToString {
 		ByteArrayOutputStream byteArrayOutputStream = null;
 		String jsonString = null;
 		try {
-			byteArrayOutputStream = new ByteArrayOutputStream();
 			int len = -1;
 			byte[] bytes = new byte[1024];
 			while ((len = inputStream.read(bytes)) != -1) {
@@ -38,6 +37,7 @@ public class StreamToString {
 					e.printStackTrace();
 				}
 			}
+			Log.i(TAG, "哈哈流转字符:" + jsonString);
 			return jsonString;
 		}
 	}
