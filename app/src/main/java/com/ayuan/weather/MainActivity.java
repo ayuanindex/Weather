@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 			String jsonString = StreamToString.toString(open);
 			ArrayList<CityInfo> cityInfos = JsonAnalysis.getCity(jsonString);
 			Log.i(TAG, "哈哈:执行结束");
+			//看拉萨酱豆腐啦是大家看法阿萨的浪费看看就拉萨的飞机
 			/*initDataBase(cityInfos);*/
 		} catch (IOException e) {
 			e.printStackTrace();
